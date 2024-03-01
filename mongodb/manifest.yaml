@@ -44,7 +44,6 @@ metadata:
 spec:
   clusterIP: none #headless
   selector:
-    labels:
       app: mongodb
       tier: db 
       project: roboshop
