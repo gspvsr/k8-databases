@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: gspvsr/redis
+        image: redis
         volumeMounts:
         - name: redis
           mountPath: /data/db
