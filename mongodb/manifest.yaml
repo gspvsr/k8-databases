@@ -42,7 +42,6 @@ kind: Service
 metadata:
   name: mongodb
 spec:
-  clusterIP: none #headless
   selector:
       app: mongodb
       tier: db 
