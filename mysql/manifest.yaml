@@ -4,13 +4,13 @@ metadata:
   name: mysql
   labels:
     app: mysql
-    tier: db 
+    tier: db
     project: roboshop
 spec:
   selector:
     matchLabels:
       app: mysql
-      tier: db 
+      tier: db
       project: roboshop
   serviceName: "mysql"
   replicas: 1
@@ -18,7 +18,7 @@ spec:
     metadata:
       labels:
         app: mysql
-        tier: db 
+        tier: db
         project: roboshop
     spec:
       containers:
@@ -29,7 +29,7 @@ spec:
             name: mysql
         volumeMounts:
         - name: mysql
-          mountPath: /var/lib/mysql 
+          mountPath: /var/lib/mysql
   volumeClaimTemplates:
   - metadata:
       name: mysql
@@ -47,7 +47,7 @@ metadata:
 spec:
   selector:
       app: mysql
-      tier: db 
+      tier: db
       project: roboshop
   ports:
   - name: mysql-port
