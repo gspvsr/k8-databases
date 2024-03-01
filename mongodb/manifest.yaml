@@ -9,10 +9,9 @@ metadata:
 spec:
   selector:
     matchLabels:
-    labels:
-    app: mongodb
-    tier: db 
-    project: roboshop
+      app: mongodb
+      tier: db 
+      project: roboshop
   serviceName: "mongodb"
   replicas: 1
   template:
