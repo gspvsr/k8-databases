@@ -13,7 +13,7 @@ spec:
     app: mongodb
     tier: db 
     project: roboshop
-  serviceName:"mongodb"
+  serviceName: "mongodb"
   replicas: 1
   template:
     metadata:
