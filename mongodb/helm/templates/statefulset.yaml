@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: gspvsr/mongodb:{{ .Values.statefulset.imageVersion }}
+        image: "gspvsr/mongodb:{{ .Values.statefulset.imageVersion }}"
         volumeMounts:
         - name: mongodb
           mountPath: /data/db

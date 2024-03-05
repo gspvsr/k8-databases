@@ -5,7 +5,7 @@
 kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.28"
 ---
 2. Provide access to Ec2 servers (it should be on role attached to EC2)
-3. Create sc for EBS synamic provisioning.
+3. Create sc for EBS dynamic provisioning.
 ---
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
