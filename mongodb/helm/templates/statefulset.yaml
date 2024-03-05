@@ -28,12 +28,8 @@ spec:
         volumeMounts:
         - name: mongodb
           mountPath: /data/db
-  volumeClaimTemplates:
-  - metadata:
-      name: mongodb
-    spec: 
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "ebs-sc"
-      resources:
-        requests:
-          storage: 5Gi
+      volumes:
+      - name: mongodb
+        persistantVolumeClaim: 
+          claimName: ebs-sc
+
