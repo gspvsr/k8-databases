@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongodb
-  Namespace: roboshop
+  namespace: roboshop
   labels:
     app: mongodb
     tier: db 
@@ -33,7 +33,7 @@ spec:
       name: mongodb
     spec: 
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "roboshop-dynamic-ebs"
+      storageClassName: "ebs-sc"
       resources:
         requests:
           storage: 5Gi
