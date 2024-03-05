@@ -20,3 +20,7 @@ parameters:
   encrypted: "true"
 ---
 4. aws eks update-kubeconfig --region us-east-1 --name eks-spot-cluster
+----
+
+install k9s :
+curl -sS https://webi.sh/k9s | sh
