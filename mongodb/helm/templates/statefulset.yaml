@@ -23,14 +23,14 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: gspvsr/mongodb:"{{ .Values.stateflset.imageVersion }}"
+        image: "gspvsr/mongodb:{{ .Values.stateflset.imageVersion }}"
         volumeMounts:
         - name: mongodb
           mountPath: /data/db
   volumeClaimTemplates:
   - metadata:
       name: mongodb
-    spec:
+    spec: 
       accessModes: [ "ReadWriteOnce" ]
       storageClassName: "roboshop-dynamic-ebs"
       resources:
