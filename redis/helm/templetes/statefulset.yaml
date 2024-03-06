@@ -28,12 +28,7 @@ spec:
         volumeMounts:
         - name: redis
           mountPath: /data
-  volumeClaimTemplates:
-  - metadata:
-      name: redis
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "roboshop-dynamic-ebs"
-      resources:
-        requests:
-          storage: 5Gi
+      volumes:
+      - name: mongodb
+        persistantVolumeClaim: 
+          claimName: ebs-sc
