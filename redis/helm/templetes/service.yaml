@@ -4,12 +4,13 @@ metadata:
   name: redis
   namespace: roboshop
 spec:
+  clusterIP: None #headless
   selector:
-      app: redis
-      tier: db 
-      project: roboshop
+    app: redis
+    tier: db
+    project: roboshop
   ports:
   - name: redis-port
     protocol: TCP
-    port: 6379
-    targetPort: 6379
+    port: 6379 # this port belongs to service
+    targetPort: 6379 # this port belongs to container
