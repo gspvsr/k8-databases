@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ebs-dynamic-pvc  # this should match with above storage class name.
+  name: ebs-redis-pvc  # this should match with above storage class name.
 spec:
   storageClassName: "ebs-sc"
   accessModes:
