@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ebs-sc
+  name: ebs-dynamic-pvc
   namespace: roboshop
 spec:
   storageClassName: "ebs-sc"
@@ -9,4 +9,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 4Gi
+      storage: 5Gi
