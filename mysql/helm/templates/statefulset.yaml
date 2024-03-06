@@ -24,15 +24,14 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: gspvsr/mysql:{{ .Values.statefulset.imageVersion }}
+        image: "gspvsr/mysql:{{ .Values.statefulset.imageVersion }}"
         envFrom:
         - configMapRef:
             name: mysql
         volumeMounts:
         - name: mysql
           mountPath: /var/lib/mysql
-        volumes:
-        - name: mysql
-          persistentVolumeClaim: 
+      volumes:
+      - name: mysql
+        persistentVolumeClaim: 
           claimName: ebs-mysql-pvc
-        
