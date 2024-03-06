@@ -4,7 +4,7 @@ metadata:
   name: ebs-redis-pvc
   namespace: roboshop
 spec:
-  storageClassName: "roboshop-dynamic-ebs"
+  storageClassName: "ebs-sc"
   accessModes:
     - ReadWriteOnce
   resources:
