@@ -5,13 +5,13 @@ metadata:
   namespace: roboshop
   labels:
     app: redis
-    tier: db 
+    tier: db
     project: roboshop
 spec:
   selector:
     matchLabels:
       app: redis
-      tier: db 
+      tier: db
       project: roboshop
   serviceName: "redis"
   replicas: 1
@@ -19,7 +19,7 @@ spec:
     metadata:
       labels:
         app: redis
-        tier: db 
+        tier: db
         project: roboshop
     spec:
       containers:
@@ -37,7 +37,3 @@ spec:
       resources:
         requests:
           storage: 5Gi
-      volumes:
-      - name: redis
-        persistantVolumeClaim: 
-          claimName: ebs-redis-pvc
