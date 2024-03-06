@@ -29,6 +29,6 @@ spec:
         - name: redis
           mountPath: /data
       volumes:
-      - name: mongodb
+      - name: redis
         persistantVolumeClaim: 
           claimName: ebs-sc
